@@ -4,7 +4,7 @@
     "slug": "cam-record",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/image.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,9 +13,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/image.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.utkaarsh.camrecord",
+      "permissions": ["CAMERA", "RECORD_AUDIO"]
+
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +39,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "697d4b77-ab76-408f-bc4f-6ea813e8ee2b"
+      }
+    },
+    "owner": "utkaarsh"
   }
 }
