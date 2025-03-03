@@ -2,7 +2,9 @@
 
 This is an React assignment based on Expo Go.
 
-## Get started
+## Extra feature
+
+Added a feature to delete the stored videos from async storage
 
 ## Objective
 
