@@ -60,8 +60,8 @@ const VideoRecorder = () => {
       const updatedVideos = [...savedVideos, uri];
       await AsyncStorage.setItem("videos", JSON.stringify(updatedVideos));
       setSavedVideos(updatedVideos);
-      // Alert.alert("Saved!", "Video has been saved successfully.",);
-      navigation.navigate("Gallery");
+      setVideoUri(null);
+      Alert.alert("Saved!", "Video has been saved successfully.");
     } catch (error) {
       console.error("Failed to save video:", error);
     }

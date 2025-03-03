@@ -1,50 +1,49 @@
-# Welcome to your Expo app 👋
+# Welcome to Cam record👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is an React assignment based on Expo Go.
 
 ## Get started
 
-1. Install dependencies
+## Objective
 
-   ```bash
-   npm install
-   ```
+The goal of this assignment is to build a React Native app that records short videos and plays them sequentially, mimicking a camcorder. The app should:
 
-2. Start the app
+- Open the camera and record a 4-second video.
+- Save and store recorded videos.
+- Display another screen where all recorded videos are played sequentially, like they are appended into a single video.
 
-   ```bash
-    npx expo start
-   ```
+## Navigation built on top of React Navigation
 
-In the output, you'll find options to open the app in a
+## Libraries
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Tailwind CSS for Styling
+- react-native-vision-camera for recording the video
+- react-native-video for displaying the videos
+- react-native-async-storage/async-storage for Storage
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Camera UI
 
-## Get a fresh project
+Implement a screen that accesses the device's camera using react-native-vision-camera.
+Automatically record a 4-second video when the camera opens.
+Save the recorded video to local storage.
 
-When you're ready, run:
+![CAMERA UI](<cam ui.jpg>)
 
-```bash
-npm run reset-project
-```
+## List of Stored Videos
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Maintain a list of recorded video URIs.
+Store them using React Native’s state management or AsyncStorage for persistence.
 
-## Learn more
+![List videos](<list of all stored videos.jpg>)
 
-To learn more about developing your project with Expo, look at the following resources:
+## Sequential Order
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Retrieve all recorded videos.
+Implement a video player using react-native-video.(or any other library)
+Play the videos sequentially, one after another.
 
-## Join the community
+![sequential order](sequential.jpg)
 
-Join our community of developers creating universal apps.
+## Video Player Modal
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+![video player](<video modal.jpg>)
